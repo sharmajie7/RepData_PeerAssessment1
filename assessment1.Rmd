@@ -70,6 +70,8 @@ na_drop
 
 **Replacing the rows with missing values with the mean of steps**
 
+I replaced the NA values with the mean of the steps. 
+
 ```{r}
 library(dplyr)
 average_missing <- apply(activity[,colnames(activity) %in% list_na,drop=F],2,FUN= mean, na.rm =  TRUE)
